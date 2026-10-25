@@ -34,7 +34,7 @@ def count_project_lines(path):
 
 
 if __name__ == "__main__":
-    print("The YUME Assistant is a built-in helper whose task is to make many tedious things easier and faster.")
+    print("The yume Assistant is a built-in helper whose task is to make many tedious things easier and faster.")
 
     print(f'[assistant] current direction - {current_dir}')
     print(f'[assistant] project direction - {proj_dir}')

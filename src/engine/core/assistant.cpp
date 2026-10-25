@@ -7,7 +7,7 @@ namespace yume {
 
         std::filesystem::path executable_path = std::filesystem::current_path();
         std::cout << "Executable path: " << executable_path << '\n';
-        std::cout << "If this is a project using YUME, the project path includes everything up to and including the YUME folder. \n";
+        std::cout << "If this is a project using yume, the project path includes everything up to and including the yume folder. \n";
         std::cout << "WARNING - If the assistant doesn�t work correctly, please check whether the proj_dir in assistant.py is correct. \n";
 
 #ifdef _WIN32

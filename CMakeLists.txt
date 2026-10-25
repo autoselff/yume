@@ -1,5 +1,5 @@
 ﻿cmake_minimum_required(VERSION 3.22)
-project(YUME VERSION 0.0.3)
+project(yume VERSION 0.0.3)
 
 set(CMAKE_CXX_STANDARD 20)
 
@@ -19,16 +19,16 @@ elseif(UNIX AND NOT APPLE)
 endif()
 
 # ===========================================================================
-#                                   YUME                                    
+#                                   yume                                    
 # ===========================================================================
-add_library(YUME_LIB STATIC
+add_library(yume_lib STATIC
     # dependencies
     deps/glad/glad.c
     deps/glad/glad.h
     deps/stb/stb.cpp
     deps/stb/stb_image.h
 
-    # YUME framework
+    # yume framework
     src/engine/core/window.h
     src/engine/core/window.cpp
 
@@ -67,12 +67,12 @@ add_library(YUME_LIB STATIC
 )
 
 if(UNIX AND NOT APPLE)
-    target_link_libraries(YUME_LIB PUBLIC glfw glm OpenGL::GL)
+    target_link_libraries(yume_lib PUBLIC glfw glm OpenGL::GL)
 else()
-    target_link_libraries(YUME_LIB PUBLIC glfw glm)
+    target_link_libraries(yume_lib PUBLIC glfw glm)
 endif()
 
-target_include_directories(YUME_LIB 
+target_include_directories(yume_lib 
     PUBLIC 
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
         $<INSTALL_INTERFACE:include>
@@ -87,7 +87,7 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
 )
 
-target_link_libraries(${PROJECT_NAME} PRIVATE YUME_LIB)
+target_link_libraries(${PROJECT_NAME} PRIVATE yume_lib)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/out/$<CONFIG>"

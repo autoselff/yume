@@ -2,7 +2,7 @@
 #include "engine/config/essentials.h"
 
 /**
- * @brief Main application function for YUME engine
+ * @brief Main application function for yume engine
  * 
  * @details Initializes the engine window, creates a node with a textured square,
  * configures shaders and rendering.
@@ -11,7 +11,7 @@
  */
 int main() {
     // Initialize the graphics engine window
-    yume::initWindow("YUME");
+    yume::initWindow("yume");
 
     // Create a smart pointer to a scene node at initial position (0,0,0)
     auto node = std::make_unique<Node>(glm::vec3{0.0f, 0.0f, 0.0f});

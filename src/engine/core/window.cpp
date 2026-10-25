@@ -60,7 +60,7 @@ namespace yume {
         }
         else {
             std::cout << "GLAD initialized correctly\n";
-            std::cout << "YUME 0.0.1 started\n";
+            std::cout << "yume 0.0.1 started\n";
         }
 
         glfwSwapInterval(1);
